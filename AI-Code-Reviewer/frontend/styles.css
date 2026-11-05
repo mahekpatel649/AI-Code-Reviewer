@@ -1,0 +1,349 @@
+/* Modern Cybersecurity SaaS Dashboard CSS Theme - Ultra-Readable & Professional */
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --bg-primary: #0A0F1D;
+  --bg-card: #131C2E;
+  --bg-card-hover: #19253D;
+  --bg-subtle: #1E293B;
+  --border-color: #25334D;
+  --border-focus: #38BDF8;
+  --text-primary: #FFFFFF;
+  --text-secondary: #E2E8F0;
+  --text-muted: #94A3B8;
+  --accent-blue: #3B82F6;
+  --accent-cyan: #38BDF8;
+  --accent-indigo: #6366F1;
+  --severity-critical: #EF4444;
+  --severity-high: #F97316;
+  --severity-medium: #F59E0B;
+  --severity-low: #38BDF8;
+  --severity-info: #94A3B8;
+}
+
+/* Base application styling */
+.stApp {
+  background-color: var(--bg-primary) !important;
+  color: var(--text-primary) !important;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif !important;
+}
+
+/* Headings - Crisp Pure White with Strong Weight */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  font-weight: 700 !important;
+  color: #FFFFFF !important;
+  letter-spacing: -0.015em !important;
+}
+
+/* Paragraphs & General Text */
+p, span, div, li {
+  color: var(--text-secondary);
+}
+
+/* Captions & Subtext - High contrast slate, never faded */
+.stCaption, .stCaption p {
+  color: #94A3B8 !important;
+  font-size: 0.85rem !important;
+}
+
+/* Sidebar styling */
+[data-testid="stSidebar"] {
+  background-color: #0E1526 !important;
+  border-right: 1px solid var(--border-color) !important;
+}
+
+[data-testid="stSidebar"] [data-testid="stMarkdownContainer"] p {
+  color: #E2E8F0 !important;
+}
+
+/* Radio button options in sidebar */
+[data-testid="stSidebar"] .stRadio label {
+  color: #F1F5F9 !important;
+  font-weight: 500 !important;
+  font-size: 0.95rem !important;
+  padding: 8px 12px !important;
+  border-radius: 8px !important;
+  transition: all 0.2s ease !important;
+}
+
+[data-testid="stSidebar"] .stRadio label:hover {
+  background: rgba(59, 130, 246, 0.12) !important;
+  color: #38BDF8 !important;
+}
+
+/* Widget Labels - Clear, bold and easily readable */
+.stWidgetLabel p, label p, label {
+  color: #F1F5F9 !important;
+  font-weight: 600 !important;
+  font-size: 0.93rem !important;
+  margin-bottom: 6px !important;
+}
+
+/* Input Fields (Text Inputs, Number Inputs) */
+input[type="text"], input[type="password"], textarea {
+  background-color: #131C2E !important;
+  color: #FFFFFF !important;
+  border: 1px solid #2D3E5D !important;
+  border-radius: 8px !important;
+  font-size: 0.95rem !important;
+  padding: 10px 14px !important;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3) !important;
+}
+
+input[type="text"]:focus, input[type="password"]:focus, textarea:focus {
+  border-color: #38BDF8 !important;
+  box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.25) !important;
+}
+
+/* Selectbox & Dropdowns */
+div[data-baseweb="select"] > div {
+  background-color: #131C2E !important;
+  border: 1px solid #2D3E5D !important;
+  border-radius: 8px !important;
+  color: #FFFFFF !important;
+}
+
+div[data-baseweb="select"] span {
+  color: #FFFFFF !important;
+  font-weight: 500 !important;
+}
+
+/* Popover / Dropdown Menu Options */
+div[data-baseweb="popover"], div[data-baseweb="menu"] {
+  background-color: #131C2E !important;
+  border: 1px solid #2D3E5D !important;
+  border-radius: 8px !important;
+}
+
+div[data-baseweb="menu"] li {
+  color: #F1F5F9 !important;
+  font-size: 0.9rem !important;
+}
+
+div[data-baseweb="menu"] li:hover {
+  background-color: #1E2B45 !important;
+  color: #38BDF8 !important;
+}
+
+/* Metric Cards - Professional elevated surface */
+.metric-card {
+  background: linear-gradient(135deg, #131C2E 0%, #17233B 100%) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 12px !important;
+  padding: 18px 20px !important;
+  box-shadow: 0 6px 20px -2px rgba(0, 0, 0, 0.45) !important;
+  transition: transform 0.2s ease, border-color 0.2s ease !important;
+}
+
+.metric-card:hover {
+  border-color: #3B82F6 !important;
+  transform: translateY(-2px) !important;
+}
+
+.metric-label {
+  font-size: 0.84rem !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.06em !important;
+  color: #94A3B8 !important;
+  margin-bottom: 6px !important;
+}
+
+.metric-value {
+  font-size: 2.2rem !important;
+  font-weight: 800 !important;
+  color: #FFFFFF !important;
+  line-height: 1.1 !important;
+  font-family: 'JetBrains Mono', monospace !important;
+}
+
+.metric-subtext {
+  font-size: 0.82rem !important;
+  color: #CBD5E1 !important;
+  margin-top: 6px !important;
+}
+
+/* Hero Banner - Sleek Deep Card */
+.hero-banner {
+  background: linear-gradient(135deg, #131C2E 0%, #1A2845 100%) !important;
+  border: 1px solid #2B3D62 !important;
+  border-radius: 14px !important;
+  padding: 24px 28px !important;
+  margin-bottom: 24px !important;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35) !important;
+}
+
+/* Severity Badges - High Contrast & Easily Distinguishable */
+.badge {
+  display: inline-flex !important;
+  align-items: center !important;
+  padding: 4px 11px !important;
+  border-radius: 6px !important;
+  font-size: 0.78rem !important;
+  font-weight: 700 !important;
+  font-family: 'JetBrains Mono', monospace !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.04em !important;
+}
+
+.badge-critical {
+  background: rgba(239, 68, 68, 0.22) !important;
+  color: #FF7B7B !important;
+  border: 1px solid #EF4444 !important;
+}
+
+.badge-high {
+  background: rgba(249, 115, 22, 0.22) !important;
+  color: #FFB074 !important;
+  border: 1px solid #F97316 !important;
+}
+
+.badge-medium {
+  background: rgba(245, 158, 11, 0.22) !important;
+  color: #FDE047 !important;
+  border: 1px solid #F59E0B !important;
+}
+
+.badge-low {
+  background: rgba(56, 189, 248, 0.22) !important;
+  color: #7DD3FC !important;
+  border: 1px solid #0284C7 !important;
+}
+
+.badge-info {
+  background: rgba(148, 163, 184, 0.22) !important;
+  color: #E2E8F0 !important;
+  border: 1px solid #64748B !important;
+}
+
+/* Expanders */
+.stExpander, details {
+  background-color: #131C2E !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 10px !important;
+  margin-bottom: 12px !important;
+}
+
+.stExpander summary, details summary {
+  color: #FFFFFF !important;
+  font-weight: 600 !important;
+  font-size: 0.96rem !important;
+  padding: 12px 16px !important;
+}
+
+.stExpander summary:hover, details summary:hover {
+  color: #38BDF8 !important;
+}
+
+/* Tabs */
+button[data-baseweb="tab"] {
+  color: #94A3B8 !important;
+  font-size: 0.92rem !important;
+  font-weight: 600 !important;
+  padding: 10px 18px !important;
+}
+
+button[data-baseweb="tab"][aria-selected="true"] {
+  color: #38BDF8 !important;
+  font-weight: 700 !important;
+  border-bottom-color: #38BDF8 !important;
+}
+
+/* Buttons */
+button[kind="primary"] {
+  background: linear-gradient(135deg, #3B82F6 0%, #2563EB 100%) !important;
+  color: #FFFFFF !important;
+  font-weight: 700 !important;
+  border: none !important;
+  border-radius: 8px !important;
+  padding: 10px 20px !important;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.4) !important;
+  transition: all 0.2s ease !important;
+}
+
+button[kind="primary"]:hover {
+  background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%) !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.5) !important;
+}
+
+button[kind="secondary"] {
+  background-color: #162035 !important;
+  color: #F1F5F9 !important;
+  border: 1px solid #2D3E5D !important;
+  border-radius: 8px !important;
+  font-weight: 600 !important;
+  transition: all 0.2s ease !important;
+}
+
+button[kind="secondary"]:hover {
+  background-color: #1E2D4A !important;
+  border-color: #38BDF8 !important;
+  color: #FFFFFF !important;
+}
+
+/* File Uploader */
+[data-testid="stFileUploadDropzone"] {
+  background-color: #131C2E !important;
+  border: 2px dashed #2B3D62 !important;
+  border-radius: 10px !important;
+  padding: 24px !important;
+}
+
+[data-testid="stFileUploadDropzone"]:hover {
+  border-color: #38BDF8 !important;
+}
+
+[data-testid="stFileUploadDropzone"] span {
+  color: #E2E8F0 !important;
+  font-weight: 500 !important;
+}
+
+/* Chat Messages */
+[data-testid="stChatMessage"] {
+  background-color: #131C2E !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 12px !important;
+  padding: 14px 18px !important;
+  margin-bottom: 12px !important;
+}
+
+[data-testid="stChatMessage"] p {
+  color: #F1F5F9 !important;
+  font-size: 0.95rem !important;
+  line-height: 1.6 !important;
+}
+
+/* Code Blocks & Preformatted Text */
+code, pre {
+  font-family: 'JetBrains Mono', monospace !important;
+}
+
+pre {
+  background-color: #0A0E17 !important;
+  border: 1px solid #202C42 !important;
+  border-radius: 8px !important;
+}
+
+code {
+  color: #E2E8F0 !important;
+}
+
+/* Alert Boxes (st.info, st.success, st.warning, st.error) */
+div[data-testid="stAlert"] {
+  border-radius: 10px !important;
+  font-weight: 500 !important;
+}
+
+div[data-testid="stAlert"] p {
+  color: #FFFFFF !important;
+  font-size: 0.94rem !important;
+}
+
+/* Dataframe & Tables */
+[data-testid="stDataFrame"] {
+  border: 1px solid var(--border-color) !important;
+  border-radius: 8px !important;
+}
